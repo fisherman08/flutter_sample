@@ -90,6 +90,10 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Text(
+              "うんこをしよう！",
+              style: new TextStyle(fontSize: 24.0),
+            ),
+            new Text(
               'You have pushed the button this many times:',
             ),
             new Text(
@@ -104,6 +108,21 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: new Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+      bottomNavigationBar: new BottomNavigationBar(items: [
+        new BottomNavigationBarItem(
+            icon: new Icon(Icons.arrow_downward), title: new Text("aaa"),
+
+        ),
+        new BottomNavigationBarItem(icon: new Icon(Icons.arrow_downward), title: new Text("bbb"))
+      ],
+      type: BottomNavigationBarType.fixed,
+      onTap: (i) {
+        setState((){
+            this._counter--;
+        });
+
+        
+      },),
     );
   }
 }
