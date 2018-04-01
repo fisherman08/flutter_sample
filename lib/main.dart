@@ -45,7 +45,21 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
 
+  BottomNavigationBar bottom = new BottomNavigationBar(items: [
+    new BottomNavigationBarItem(
+      icon: new Icon(Icons.arrow_downward), title: new Text("aaa"),
+
+    ),
+    new BottomNavigationBarItem(icon: new Icon(Icons.arrow_downward), title: new Text("bbb"))
+  ],
+    type: BottomNavigationBarType.fixed,
+    onTap: (i) {
+
+    },);
+
   void _incrementCounter() {
+
+
     setState(() {
       // This call to setState tells the Flutter framework that something has
       // changed in this State, which causes it to rerun the build method below
@@ -64,6 +78,8 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
+
+
     return new Scaffold(
       appBar: new AppBar(
         // Here we take the value from the MyHomePage object that was created by
@@ -108,21 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
         tooltip: 'Increment',
         child: new Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-      bottomNavigationBar: new BottomNavigationBar(items: [
-        new BottomNavigationBarItem(
-            icon: new Icon(Icons.arrow_downward), title: new Text("aaa"),
-
-        ),
-        new BottomNavigationBarItem(icon: new Icon(Icons.arrow_downward), title: new Text("bbb"))
-      ],
-      type: BottomNavigationBarType.fixed,
-      onTap: (i) {
-        setState((){
-            this._counter--;
-        });
-
-        
-      },),
+      bottomNavigationBar: this.bottom,
     );
   }
 }
