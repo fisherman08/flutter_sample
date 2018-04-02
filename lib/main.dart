@@ -107,10 +107,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             new Text(
               "うんこをしよう！",
-              style: new TextStyle(fontSize: 24.0),
+              style: new TextStyle(fontSize: 35.0),
             ),
             new Text(
-              'You have pushed the button this many times:',
+              'You have pushed the button this many times!!!:',
             ),
             new Text(
               '$_counter',
